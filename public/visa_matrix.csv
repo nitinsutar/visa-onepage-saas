@@ -1,5 +1,11 @@
-# nationality,destination,allowed,fee,processing,stayLimit,notes,lastUpdated,acceptanceRate,documents
-India,Thailand,true,0,Instant,30,"Visa-exempt window may vary; verify.",2025-08-20,90,"Passport (6 months)|Return ticket|Hotel booking|Proof of funds"
-India,Japan,false,2400,"3 days",0,"eVisa/BLS process may apply; check official sites.",2025-08-20,65,"Passport|Photo|Bank statements|Itinerary"
-India,Indonesia,true,0,Instant,30,"Visa-free or VoA depending on policy; verify.",2025-08-20,92,"Passport|Return ticket|Hotel booking"
-India,Singapore,false,0,"3-5 days",0,"Sponsored eVisa/ETA; airline/agent may facilitate.",2025-08-20,70,"Passport|Photo|Return ticket|Hotel booking|Funds proof"
+# nationality,destination,allowed,fee,processing,stayLimit,acceptanceRate,documentsRequired,notes,lastUpdated
+India,Thailand,true,0,Instant,30,95%,"Passport (6 months), Return Ticket, Hotel Booking","Visa-exempt 30 days",2025-08-20
+India,Japan,false,2400,"3 days",0,70%,"Passport, Photo, Bank Statement","eVisa required",2025-08-20
+India,Indonesia,true,0,Instant,30,98%,"Passport, Onward Ticket","Visa-free 30 days",2025-08-20
+India,Singapore,false,0,"3-5 days",0,65%,"Passport, Financial Proof, Flight Itinerary","eVisa/ETA required",2025-08-20
+India,UAE,false,0,"2-5 days",0,72%,"Passport, Return Ticket, Hotel Booking","Pre-arranged visa",2025-08-20
+India,Maldives,true,0,Instant,30,96%,"Passport, Hotel Booking, Return Ticket","Visa on arrival",2025-08-20
+India,Malaysia,true,0,Instant,30,94%,"Passport, Flight, Hotel Booking","Visa-free / eNTRI",2025-08-20
+India,Sri Lanka,true,0,Instant,30,91%,"Passport, ETA Confirmation","ETA required",2025-08-20
+India,Nepal,true,0,Instant,90,99%,"Passport or Voter ID","Visa-free for Indians",2025-08-20
+India,Bhutan,true,0,Instant,14,99%,"Passport or Voter ID","Visa-free for Indians",2025-08-20
