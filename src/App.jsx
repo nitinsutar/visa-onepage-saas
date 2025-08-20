@@ -10,7 +10,7 @@ function Currency({ value, currency = 'INR' }) {
   const n = Number(value || 0);
   return <>{symbol}{Number.isFinite(n) ? n.toLocaleString(locale) : value}</>;
 }
-}
+
 
 function DocList({ docs }) {
   const items = String(docs || '')
