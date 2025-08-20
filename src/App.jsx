@@ -3,12 +3,13 @@ import { defaultData } from './data';
 import { loadVisaCSV } from './dataLoader';
 
 function Currency({ value, currency = 'INR' }) {
-  try {
-    const symbol = currency === 'INR' ? '₹' : '';
-    return <>{symbol}{Number(value || 0).toLocaleString('en-IN')}</>;
-  } catch {
-    return <>{value}</>;
-  }
+  const symbols = { INR: '₹', USD: '$', GBP: '£', EUR: '€', SGD: 'S$', AED: 'AED ' };
+  const locales = { INR: 'en-IN', USD: 'en-US', GBP: 'en-GB', EUR: 'en-IE', SGD: 'en-SG', AED: 'ar-AE' };
+  const symbol = symbols[currency] ?? '';
+  const locale = locales[currency] ?? 'en-US';
+  const n = Number(value || 0);
+  return <>{symbol}{Number.isFinite(n) ? n.toLocaleString(locale) : value}</>;
+}
 }
 
 function DocList({ docs }) {
