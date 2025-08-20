@@ -1,50 +1,48 @@
-nationality,destination,allowed,fee,processing,stayLimit,acceptanceRate,documentsRequired,notes,lastUpdated
-India,Thailand,True,0,Instant,30,95%,"Passport, Return Ticket, Hotel Booking",Visa-exempt 30 days,2025-08-20
-India,Japan,False,2400,3 days,0,70%,"Passport, Photo, Bank Statement",eVisa required,2025-08-20
-India,Indonesia,True,0,Instant,30,98%,"Passport, Onward Ticket",Visa-free 30 days,2025-08-20
-India,Singapore,False,0,3-5 days,0,65%,"Passport, Financial Proof, Flight Itinerary",eVisa/ETA required,2025-08-20
-India,UAE,False,0,2-5 days,0,72%,"Passport, Return Ticket, Hotel Booking",Pre-arranged visa,2025-08-20
-India,Maldives,True,0,Instant,30,96%,"Passport, Hotel Booking, Return Ticket",Visa on arrival,2025-08-20
-India,Malaysia,True,0,Instant,30,94%,"Passport, Flight, Hotel Booking",Visa-free / eNTRI,2025-08-20
-India,Sri Lanka,True,0,Instant,30,91%,"Passport, ETA Confirmation",ETA required,2025-08-20
-India,Nepal,True,0,Instant,90,99%,Passport or Voter ID,Visa-free for Indians,2025-08-20
-India,Bhutan,True,0,Instant,14,99%,Passport or Voter ID,Visa-free for Indians,2025-08-20
-India,Vietnam,False,0,3 days,0,68%,"Passport, Photo, Hotel Booking",eVisa required,2025-08-20
-India,Turkey,False,3500,2-3 days,30,75%,"Passport, Hotel Booking, Return Ticket",eVisa available,2025-08-20
-India,Kenya,True,0,Instant,30,85%,"Passport, Onward Ticket",eTA/Visa-free policy,2025-08-20
-India,Tanzania,True,0,Instant,30,83%,"Passport, Hotel Booking, Onward Ticket",Visa on Arrival,2025-08-20
-India,Seychelles,True,0,Instant,30,88%,"Passport, Hotel Booking, Proof of Funds",Visitor's Permit on arrival,2025-08-20
-India,Mauritius,True,0,Instant,90,90%,"Passport, Return Ticket",Visa-free,2025-08-20
-India,Oman,False,0,3-5 days,0,74%,"Passport, Return Ticket",eVisa required,2025-08-20
-India,Qatar,True,0,Instant,30,85%,"Passport, Return Ticket",Visa-free entry,2025-08-20
-India,Saudi Arabia,False,0,3-7 days,0,65%,"Passport, Photo, Return Ticket",eVisa/Sticker visa,2025-08-20
-India,USA,False,0,15+ days,0,60%,"Passport, DS-160, Photo, Funds Proof",B1/B2 visa,2025-08-20
-India,UK,False,0,15+ days,0,62%,"Passport, Funds Proof, Hotel Booking",Standard Visitor Visa,2025-08-20
-India,Schengen Area,False,0,15+ days,0,64%,"Passport, Bank Statement, Hotel Booking",Schengen Short-stay Visa,2025-08-20
-India,France,False,0,15+ days,0,66%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Germany,False,0,15+ days,0,65%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Italy,False,0,15+ days,0,63%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Spain,False,0,15+ days,0,62%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Netherlands,False,0,15+ days,0,61%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Switzerland,False,0,15+ days,0,60%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20
-India,Australia,False,0,15+ days,0,67%,"Passport, Funds Proof, Itinerary",Subclass 600 Visitor Visa,2025-08-20
-India,Canada,False,0,20+ days,0,64%,"Passport, Bank Statement, Hotel Booking",Visitor Visa,2025-08-20
-India,New Zealand,False,0,10+ days,0,66%,"Passport, Funds Proof, Hotel Booking",Visitor Visa,2025-08-20
-India,China,False,0,7-10 days,0,55%,"Passport, Hotel Booking, Invitation Letter",Tourist Visa,2025-08-20
-India,Russia,False,0,5-7 days,0,58%,"Passport, Invitation, Hotel Booking",Tourist Visa,2025-08-20
-India,South Africa,False,0,5 days,0,72%,"Passport, Hotel Booking, Return Ticket",Visitor Visa,2025-08-20
-India,Brazil,False,0,7-10 days,0,70%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Argentina,False,0,5-7 days,0,69%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Mexico,False,0,5-10 days,0,66%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Chile,False,0,7 days,0,68%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Peru,False,0,7 days,0,67%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Egypt,False,0,5 days,0,70%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20
-India,Morocco,False,0,5 days,0,71%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Israel,False,0,5-7 days,0,69%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Jordan,False,0,5-7 days,0,72%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Iran,False,0,5-7 days,0,50%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Kazakhstan,False,0,5 days,0,55%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20
-India,Uzbekistan,False,0,5 days,0,56%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20
-India,Mongolia,False,0,5-7 days,0,54%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,Philippines,False,0,5-7 days,0,65%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
-India,South Korea,False,0,7-10 days,0,60%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20
+nationality,destination,allowed,fee,processing,stayLimit,acceptanceRate,documentsRequired,notes,lastUpdated,currency
+India,Thailand,True,0,Instant,30,95%,"Passport, Return Ticket, Hotel Booking",Visa-exempt 30 days,2025-08-20,INR
+India,Indonesia,True,0,Instant,30,98%,"Passport, Onward Ticket",Visa-free 30 days,2025-08-20,INR
+India,Maldives,True,0,Instant,30,96%,"Passport, Hotel Booking, Return Ticket",Visa on arrival,2025-08-20,INR
+India,Malaysia,True,0,Instant,30,94%,"Passport, Flight, Hotel Booking",Visa-free / eNTRI,2025-08-20,INR
+India,Sri Lanka,True,0,Instant,30,91%,"Passport, ETA Confirmation",ETA required,2025-08-20,INR
+India,Nepal,True,0,Instant,90,99%,Passport or Voter ID,Visa-free for Indians,2025-08-20,INR
+India,Bhutan,True,0,Instant,14,99%,Passport or Voter ID,Visa-free for Indians,2025-08-20,INR
+India,Qatar,True,0,Instant,30,85%,"Passport, Return Ticket",Visa-free entry,2025-08-20,INR
+India,Seychelles,True,0,Instant,30,88%,"Passport, Hotel Booking, Proof of Funds",Visitor's Permit on arrival,2025-08-20,INR
+India,Mauritius,True,0,Instant,90,90%,"Passport, Return Ticket",Visa-free,2025-08-20,INR
+India,Japan,False,2400,3 days,0,70%,"Passport, Photo, Bank Statement",eVisa required,2025-08-20,INR
+India,Singapore,False,2200,3-5 days,0,65%,"Passport, Financial Proof, Flight Itinerary",eVisa/ETA required,2025-08-20,INR
+India,UAE,False,6000,2-5 days,0,72%,"Passport, Return Ticket, Hotel Booking",Pre-arranged visa,2025-08-20,INR
+India,Turkey,False,3500,2-3 days,30,75%,"Passport, Hotel Booking, Return Ticket",eVisa available,2025-08-20,INR
+India,Vietnam,False,1800,3 days,0,68%,"Passport, Photo, Hotel Booking",eVisa required,2025-08-20,INR
+India,Oman,False,3200,3-5 days,0,74%,"Passport, Return Ticket",eVisa required,2025-08-20,INR
+India,Saudi Arabia,False,6000,3-7 days,0,65%,"Passport, Photo, Return Ticket",eVisa/Sticker visa,2025-08-20,INR
+India,USA,False,11200,15+ days,0,60%,"Passport, DS-160, Photo, Funds Proof",B1/B2 visa,2025-08-20,INR
+India,UK,False,9500,15+ days,0,62%,"Passport, Funds Proof, Hotel Booking",Standard Visitor Visa,2025-08-20,INR
+India,Schengen Area,False,7200,15+ days,0,64%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,France,False,7200,15+ days,0,66%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Germany,False,7200,15+ days,0,65%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Italy,False,7200,15+ days,0,63%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Spain,False,7200,15+ days,0,62%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Netherlands,False,7200,15+ days,0,61%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Switzerland,False,7200,15+ days,0,60%,"Passport, Bank Statement, Hotel Booking",Schengen Visa,2025-08-20,INR
+India,Australia,False,9000,15+ days,0,67%,"Passport, Funds Proof, Itinerary",Visitor Visa Subclass 600,2025-08-20,INR
+India,Canada,False,9000,20+ days,0,64%,"Passport, Bank Statement, Hotel Booking",Visitor Visa,2025-08-20,INR
+India,New Zealand,False,7500,10+ days,0,66%,"Passport, Funds Proof, Hotel Booking",Visitor Visa,2025-08-20,INR
+India,China,False,4300,7-10 days,0,55%,"Passport, Hotel Booking, Invitation Letter",Tourist Visa,2025-08-20,INR
+India,Russia,False,5000,5-7 days,0,58%,"Passport, Invitation, Hotel Booking",Tourist Visa,2025-08-20,INR
+India,South Africa,False,3500,5 days,0,72%,"Passport, Hotel Booking, Return Ticket",Visitor Visa,2025-08-20,INR
+India,Brazil,False,6000,7-10 days,0,70%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Argentina,False,5000,5-7 days,0,69%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Mexico,False,4500,5-10 days,0,66%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Chile,False,4800,7 days,0,68%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Peru,False,4700,7 days,0,67%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Egypt,False,3500,5 days,0,70%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20,INR
+India,Morocco,False,3400,5 days,0,71%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Israel,False,4000,5-7 days,0,69%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Jordan,False,3800,5-7 days,0,72%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Iran,False,4200,5-7 days,0,50%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Kazakhstan,False,3000,5 days,0,55%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20,INR
+India,Uzbekistan,False,2800,5 days,0,56%,"Passport, Hotel Booking, Return Ticket",eVisa required,2025-08-20,INR
+India,Mongolia,False,2500,5-7 days,0,54%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,Philippines,False,3000,5-7 days,0,65%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
+India,South Korea,False,5000,7-10 days,0,60%,"Passport, Hotel Booking, Return Ticket",Tourist Visa,2025-08-20,INR
