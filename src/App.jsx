@@ -2,11 +2,23 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { defaultData } from './data';
 import { loadVisaCSV } from './dataLoader';
 
+function Currency({ value, currency = 'INR' }) {
+  try {
+    const symbol = currency === 'INR' ? '₹' : '';
+    return <>{symbol}{Number(value || 0).toLocaleString('en-IN')}</>;
+  } catch {
+    return <>{value}</>;
+  }
+}
+
 function DocList({ docs }) {
-  const items = String(docs || '').split('|').map(s => s.trim()).filter(Boolean);
+  const items = String(docs || '')
+    .split(/\||,/)
+    .map(s => s.trim())
+    .filter(Boolean);
   if (!items.length) return null;
   return (
-    <ul className="list">
+    <ul className="mt-2 list-disc pl-5 space-y-1 text-gray-700">
       {items.map((d, i) => <li key={i}>{d}</li>)}
     </ul>
   );
@@ -41,58 +53,110 @@ export default function App() {
   };
 
   return (
-    <div className="container">
-      <h1>Visa Requirements in 1 Click</h1>
-      <p style={{opacity:.7}}>Informational only. Always verify with official sources before travel.</p>
-
-      <div className="card" style={{marginTop:12}}>
-        <div style={{display:'grid', gap:12, gridTemplateColumns:'1fr 1fr'}}>
-          <label>
-            <div style={{fontSize:12, marginBottom:4}}>Your nationality</div>
-            <select value={nationality} onChange={e => setNationality(e.target.value)} style={{width:'100%', padding:8}}>
-              {nationalities.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
-          </label>
-          <label>
-            <div style={{fontSize:12, marginBottom:4}}>Destination</div>
-            <select value={destination} onChange={e => setDestination(e.target.value)} style={{width:'100%', padding:8}}>
-              {destinations.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
-          </label>
+    <main className="min-h-screen bg-gray-50">
+      <header className="bg-white border-b">
+        <div className="mx-auto max-w-5xl px-4 py-6">
+          <h1 className="text-3xl font-bold tracking-tight">Visa Requirements in 1 Click</h1>
+          <p className="mt-1 text-gray-600">Pick your nationality and destination — get a clear answer with fees, processing time, and documents required. <span className="italic">Always verify with official sources before travel.</span></p>
         </div>
-        <button style={{marginTop:12, width:'100%', padding:12, borderRadius:8, border:'1px solid #111', background:'#111', color:'#fff'}} onClick={handleCheck}>Check Visa</button>
-      </div>
+      </header>
 
-      {result && (
-        <div className="card" style={{marginTop:16}}>
-          {typeof result === 'string' ? (
-            result
-          ) : (
-            <div>
-              <div className={`badge ${result.allowed ? 'green' : 'red'}`}>
-                {result.allowed ? '✅ Visa Free / VoA / ETA' : '❌ Visa Required'}
-              </div>
-              {!result.allowed && (
-                <div style={{marginTop:8}}>Fee: ₹{Number(result.fee || 0).toLocaleString('en-IN')} · Processing: {result.processing || '—'}</div>
-              )}
-              {result.stayLimit && (<div style={{marginTop:4}}>Stay limit: {result.stayLimit} days</div>)}
-              {result.acceptanceRate >= 0 && (<div style={{marginTop:4}}>Acceptance rate: {Number(result.acceptanceRate).toFixed(0)}%</div>)}
-              {result.documents && (<div style={{marginTop:8}}><strong>Documents usually required:</strong><DocList docs={result.documents} /></div>)}
-              {result.notes && (<div style={{marginTop:8, opacity:.8}}>Note: {result.notes}</div>)}
-              {result.lastUpdated && (<footer>Last updated: {result.lastUpdated}</footer>)}
+      <section className="mx-auto max-w-5xl px-4 py-8">
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="md:col-span-2 rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-5">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block">
+                <span className="text-sm font-medium text-gray-700">Your nationality</span>
+                <select
+                  className="mt-1 block w-full rounded-xl border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-brand-600 focus:ring-brand-600"
+                  value={nationality}
+                  onChange={e => setNationality(e.target.value)}
+                >
+                  {nationalities.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </label>
+              <label className="block">
+                <span className="text-sm font-medium text-gray-700">Destination</span>
+                <select
+                  className="mt-1 block w-full rounded-xl border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-brand-600 focus:ring-brand-600"
+                  value={destination}
+                  onChange={e => setDestination(e.target.value)}
+                >
+                  {destinations.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </label>
             </div>
-          )}
-        </div>
-      )}
+            <button
+              onClick={handleCheck}
+              className="mt-5 w-full rounded-2xl bg-black px-4 py-3 text-white font-semibold transition hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+            >
+              Check Requirements
+            </button>
+            <p className="mt-2 text-xs text-gray-500">No login. No forms. Just the answer.</p>
+          </div>
 
-      <details style={{marginTop:16, opacity:.85}}>
-        <summary>How to add 200+ routes</summary>
-        <ol style={{marginLeft:18}}>
-          <li>Open <code>public/visa_matrix.csv</code>.</li>
-          <li>Add rows using the columns listed in README.</li>
-          <li>Deploy – the app reads the CSV on load.</li>
-        </ol>
-      </details>
-    </div>
+          <aside className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-5">
+            <h3 className="text-sm font-semibold text-gray-700">Why travelers use this</h3>
+            <ul className="mt-3 list-disc pl-5 space-y-1 text-sm text-gray-600">
+              <li>Instant "Visa-Free" vs "Visa Required" verdict</li>
+              <li>See estimated fee, processing time & stay limit</li>
+              <li>Know documents to carry — passport, funds proof, tickets</li>
+            </ul>
+          </aside>
+        </div>
+
+        {result && (
+          <div className="mt-6 rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-5">
+            {typeof result === 'string' ? (
+              <p className="text-gray-700">{result}</p>
+            ) : (
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${result.allowed ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                    {result.allowed ? '✅ Visa Free / VoA / ETA' : '❌ Visa Required'}
+                  </span>
+                  {result.stayLimit && (
+                    <span className="text-sm text-gray-600">· Stay limit: <strong>{result.stayLimit} days</strong></span>
+                  )}
+                </div>
+
+                {!result.allowed && (
+                  <div className="text-gray-800">
+                    <span className="font-medium">Estimated fee:</span> <Currency value={result.fee} currency={result.currency || 'INR'} />
+                    <span className="mx-2">•</span>
+                    <span className="font-medium">Processing:</span> {result.processing || '—'}
+                  </div>
+                )}
+
+                {result.acceptanceRate && (
+                  <div className="text-gray-700">Acceptance rate: <strong>{result.acceptanceRate}</strong></div>
+                )}
+
+                {result.documentsRequired && (
+                  <div>
+                    <div className="font-semibold">Documents usually required</div>
+                    <DocList docs={result.documentsRequired} />
+                  </div>
+                )}
+
+                {result.notes && (
+                  <p className="text-sm text-gray-600">Note: {result.notes}</p>
+                )}
+
+                {result.lastUpdated && (
+                  <p className="text-xs text-gray-500">Last updated: {result.lastUpdated}</p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+
+      <footer className="border-t bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-6 text-xs text-gray-500">
+          This tool is for informational purposes only and may be outdated. Always confirm with the destination’s official immigration website or embassy.
+        </div>
+      </footer>
+    </main>
   );
 }
