@@ -1,0 +1,5 @@
+# nationality,destination,allowed,fee,processing,stayLimit,notes,lastUpdated,acceptanceRate,documents
+India,Thailand,true,0,Instant,30,"Visa-exempt window may vary; verify.",2025-08-20,90,"Passport (6 months)|Return ticket|Hotel booking|Proof of funds"
+India,Japan,false,2400,"3 days",0,"eVisa/BLS process may apply; check official sites.",2025-08-20,65,"Passport|Photo|Bank statements|Itinerary"
+India,Indonesia,true,0,Instant,30,"Visa-free or VoA depending on policy; verify.",2025-08-20,92,"Passport|Return ticket|Hotel booking"
+India,Singapore,false,0,"3-5 days",0,"Sponsored eVisa/ETA; airline/agent may facilitate.",2025-08-20,70,"Passport|Photo|Return ticket|Hotel booking|Funds proof"
